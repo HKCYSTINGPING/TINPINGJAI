@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>虛擬寵物</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-view">
+    <!-- 1️⃣ 上方導航區：健康值、心情、天數 -->
+    <header class="nav-bar">
+      <div class="nav-item nav-health">
+        <span class="nav-value" aria-hidden="true">❤️❤️❤️❤️❤️</span>
+      </div>
+      <div class="nav-item nav-mood">
+        <span class="nav-icon" aria-hidden="true">😊</span>
+        <span class="nav-value">開心</span>
+      </div>
+      <div class="nav-item nav-days">
+        <span class="nav-icon" aria-hidden="true">📅</span>
+        <span class="nav-value">第 <em>0</em> 天</span>
+      </div>
+    </header>
+
+    <!-- 2️⃣ 中間主畫面：寵物動畫 -->
+    <section class="main-pet-area">
+      <div class="pet-video-wrap">
+        <video class="pet-video" autoplay muted loop playsinline>
+          <source src="egg.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <!-- 3️⃣ 底部天秤區塊 -->
+    <footer class="libra-footer">
+      <div class="libra-video-wrap">
+        <img class="libra-img" src="Libras.png" alt="Libra 天秤">
+      </div>
+      <p class="libra-label">Libra · 天秤</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

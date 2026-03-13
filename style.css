@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #c4a35a;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 固定直向手機比例 (9:16) */
+.game-view {
+  position: relative;
+  width: min(100vw, 100vh * 9 / 16);
+  height: min(100vh, 100vw * 16 / 9);
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  background: #c97d3d;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== 1️⃣ 上方導航區（約 5–10%） ========== */
+.nav-bar {
+  flex: 0 0 8%;
+  min-height: 5%;
+  max-height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 250, 245, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  z-index: 10;
+  margin: 0 0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: clamp(0.75rem, 2.2vw, 0.95rem);
+  color: #5a4a4a;
+  font-weight: 500;
+}
+
+.nav-icon {
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.nav-value em {
+  font-style: normal;
+  font-weight: 700;
+  color: #7b6b9e;
+}
+
+/* ========== 2️⃣ 中間主畫面（約 60%） ========== */
+.main-pet-area {
+  flex: 1 1 60%;
+  min-height: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.8rem 0.8rem;
+  position: relative;
+}
+
+.pet-video-wrap {
+  width: 100%;
+  height: 100%;
+  max-width: 85%;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.pet-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========== 3️⃣ 底部天秤區塊（約 30%） ========== */
+.libra-footer {
+  flex: 0 0 30%;
+  min-height: 26%;
+  background: #8b5a2b;
+  border-radius: 1.25rem 1.25rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem 1rem;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.libra-video-wrap {
+  flex: 1;
+  width: 100%;
+  max-height: 85%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.libra-video,
+.libra-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.libra-label {
+  flex: 0 0 auto;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
